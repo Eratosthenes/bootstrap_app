@@ -1,0 +1,46 @@
+<%= render 'head' %>
+<body>
+<%= render 'header' %>
+<div class="container-fluid" style="height:1000px">
+
+    <%= render 'sidebar' %>
+
+    <div class="col-md-8 text-justify">
+      <h1 style="font-size: 4em;">Mission</h1>
+      <div class="row">
+        <div class="col-md-9">
+          <p class="lead">
+          The mission of the Wild Plant ID is to design, build, deploy, and maintain a
+          software application template which enables amateurs to accurately identify wild
+          plants in individual ecologically defined areas using pocketable computing devices.
+          </p>
+          <p>
+          There are three objectives which make this app unique among both printed and digital
+          field guides. In these three critical objectives the application is to be:
+          </p>
+        </div>
+
+        <div class="col-md-2">
+          <div id="green_leaf_div"><%= image_tag 'green_leaf.gif', :id => 'green_leaf' %></div>
+        </div>
+      </div>
+      <p >
+      1. <strong style="font-size: 20px;">Customizeable</strong> - The application will be adaptable so that any interested individual
+      or group would be able to create a Wild Plant ID application of their own, ecologically defined area.
+      </p>
+
+      <p >
+      2. <strong style="font-size: 20px;">Comprehensive</strong> - Including all native and naturalized, field-identifiable plants
+      including wildflowers, ferns, and trees any place in the watershed. Only plants too
+      small for field identification will not be included.
+      </p>
+
+      <p >
+      3. <strong style="font-size: 20px;">Exclusive</strong> - Including only plants found in a limited, specific watershed. You
+      won't have to wade through identifying plants not found in your watershed.
+      </p>
+    </div>
+</div>
+
+<%= render 'footer' %>
+</body>
