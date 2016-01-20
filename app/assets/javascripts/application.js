@@ -14,8 +14,9 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
-$('#topnavbar').affix({
+/*$('#topnavbar').affix({
     offset: {
         top: $('#banner').height()
     }
 });
+*/

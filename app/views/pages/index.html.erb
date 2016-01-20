@@ -31,7 +31,6 @@
       color: white;
       padding: 15px;
       position: absolute;
-      margin-top: 3000;
       left: 0;
       width: 100%;
     }
@@ -51,7 +50,14 @@
       margin-bottom: 280px;
       text-shadow: 3px 3px 10px black;
     }
+    .affix {
+      top: 0;
+      width: 100%;
+    }
 
+    .affix + .container-fluid {
+      padding-top: 70px;
+    }    /*
     #topnavbar {
         margin: 0;
     }
@@ -60,6 +66,7 @@
         top: 0;
         width: 100%;
     }
+    */
    /* On small screens, set height to 'auto' for sidenav and grid */
     @media screen and (max-width: 767px) {
       .sidenav {
@@ -73,13 +80,13 @@
 <body>
 
 
-<div class="container" id="banner">
+<div class="container-fluid" id="banner">
   <div class="row">
       <%= image_tag 'wild_plant_id_banner_full_size.jpg', :id => 'forest_panorama' %>
   </div>
 </div>
 
-<nav class="navbar navbar-inverse" id="topnavbar">
+<nav class="navbar navbar-inverse" data-spy="affix" data-offset-top="200" id="topnavbar">
   <div class="container-fluid">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
