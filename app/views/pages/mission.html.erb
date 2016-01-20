@@ -1,3 +1,4 @@
+<%= javascript_include_tag 'application' %>
 <%= render 'head' %>
 <body>
 <%= render 'header' %>
@@ -24,23 +25,58 @@
           <div id="green_leaf_div"><%= image_tag 'green_leaf.gif', :id => 'green_leaf' %></div>
         </div>
       </div>
-      <p >
-      1. <strong style="font-size: 20px;">Customizeable</strong> - The application will be adaptable so that any interested individual
-      or group would be able to create a Wild Plant ID application of their own, ecologically defined area.
-      </p>
+      <p>
 
-      <p >
-      2. <strong style="font-size: 20px;">Comprehensive</strong> - Including all native and naturalized, field-identifiable plants
-      including wildflowers, ferns, and trees any place in the watershed. Only plants too
-      small for field identification will not be included.
-      </p>
-
-      <p >
-      3. <strong style="font-size: 20px;">Exclusive</strong> - Including only plants found in a limited, specific watershed. You
-      won't have to wade through identifying plants not found in your watershed.
-      </p>
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#mission1"><strong style="font-size: 20px;">Customizeable</strong></a>
+            </h4>
+          </div>
+        <div id="mission1" class="panel-collapse collapse">
+          <div class="panel-body">
+            The application will be adaptable so that any interested individual or group
+            would be able to create a Wild Plant ID application of their own, ecologically defined area.
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
+      <div class="panel-group">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+              <a data-toggle="collapse" href="#mission2"><strong style="font-size: 20px;">Comprehensive</strong></a>
+            </h4>
+          </div>
+        <div id="mission2" class="panel-collapse collapse">
+          <div class="panel-body">
+          Including all native and naturalized, field-identifiable plants
+          including wildflowers, ferns, and trees any place in the watershed. Only plants too
+          small for field identification will not be included.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel-group">
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h4 class="panel-title">
+            <a data-toggle="collapse" href="#mission3"><strong style="font-size: 20px;">Exclusive</strong></a>
+          </h4>
+        </div>
+        <div id="mission3" class="panel-collapse collapse">
+        <div class="panel-body">
+        Including only plants found in a limited, specific watershed. You
+        won't have to wade through identifying plants not found in your watershed.
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
 <%= render 'footer' %>
 </body>
