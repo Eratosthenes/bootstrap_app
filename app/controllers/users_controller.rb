@@ -29,7 +29,8 @@ class UsersController < ApplicationController
     respond_to do |format|
       if @user.save
         UserMailer.send_email(@user).deliver_now
-        format.html { redirect_to '/users/new', notice: 'Email was successfully sent.' }
+        flash[:success] = "Email was successfully sent."
+        format.html { redirect_to '/users/new' }
         format.json { render :show, status: :created, location: @user }
       else
         format.html { render :new }
