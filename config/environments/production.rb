@@ -1,18 +1,17 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
-
-  config.action_mailer.perform_deliveries = true
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default_url_options = { :host => 'wildplantid.herokuapp.com' }
-  config.action_mailer.delivery_method = :sendmail
-  config.action_mailer.sendmail_settings = {
-    :address => "smtp.sendgrid.net",
-    :port => 587,
-    :domain => "heroku.com",
-    :user_name => ENV["GMAIL_USERNAME"],
-    :password => ENV["GMAIL_PASSWORD"],
-    :authentication => "plain",
-    :enable_starttls_auto => true}
+  config.action_mailer.delivery_method = :smtp
+  ActionMailer::Base.smtp_settings = {
+  :address        => 'smtp.sendgrid.net',
+  :port           => '587',
+  :authentication => :plain,
+  :user_name      => ENV['GMAIL_USERNAME'],
+  :password       => ENV['GMAIL_PASSWORD'],
+  :domain         => 'heroku.com',
+  :enable_starttls_auto => true
+  }
+  config.action_mailer.default_url_options = { :host => 'http://wildplantid.herokuapp.com' }
 
   # Code is not reloaded between requests.
   config.cache_classes = true
