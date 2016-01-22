@@ -3,6 +3,6 @@ class UserMailer < ApplicationMailer
 
   def send_email(user)
     @user = user
-    mail(to: 'n.rapport@gmail.com', subject: 'Wild Plant ID Email')
+    mail(from: @user.email, to: 'n.rapport@gmail.com', subject: 'Wild Plant ID Email')
   end
 end
