@@ -1,7 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
-
+  config.action_mailer.default_url_options = { :host => 'wildplantid.herokuapp.com' }
   config.action_mailer.delivery_method = :sendmail
   ActionMailer::Base.sendmail_settings = { :address => "smtp.gmail.com",
      :port => "587", :domain => "gmail.com", :user_name => ENV["GMAIL_USERNAME"],
